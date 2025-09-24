@@ -1,0 +1,8 @@
+site_name: 'Documentation'
+
+nav:
+  - Home: index.md
+  - Pipelines: pipelines.md
+
+plugins:
+  - techdocs-core

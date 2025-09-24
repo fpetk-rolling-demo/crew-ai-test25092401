@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: crew-ai-test25092401 
+  description: Secure Supply Chain Example for Chatbot Application   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:
+    # ArgoCD apps from this template used rhtap-gitops as the grouping
+    argocd/app-selector: rhtap/gitops=crew-ai-test25092401  
+    janus-idp.io/tekton: crew-ai-test25092401 
+    backstage.io/kubernetes-id: crew-ai-test25092401 
+    backstage.io/techdocs-ref: dir:. 
+    quay.io/repository-slug: tpetkos/crew-ai-test25092401
+  tags: ["ai", "llamacpp", "vllm", "python"] 
+spec:
+  type: service
+  owner: user:default/theofanispetkos 
+  lifecycle: experimental
+ 
