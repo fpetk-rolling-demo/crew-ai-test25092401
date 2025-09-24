@@ -1,7 +1,13 @@
 FROM registry.access.redhat.com/ubi9/python-311:latest
+
+RUN microdnf update -y && \
+    microdnf install -y sqlite-devel && \
+    microdnf clean all
+
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     PIP_NO_CACHE_DIR=1
+
 WORKDIR /app
 COPY pyproject.toml .
 RUN pip install --no-cache-dir --upgrade pip setuptools wheel && \
