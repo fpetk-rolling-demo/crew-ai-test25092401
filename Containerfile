@@ -1,8 +1,9 @@
 FROM registry.access.redhat.com/ubi9/python-311:latest
 
-RUN microdnf update -y && \
-    microdnf install -y sqlite-devel && \
-    microdnf clean all
+USER 0
+RUN dnf update -y && \
+    dnf install -y sqlite-devel && \
+    dnf clean all
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
