@@ -2,7 +2,7 @@ FROM registry.access.redhat.com/ubi9/python-311:latest
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
-    PIP_NO_CACHE_DIR=1 \
+    PIP_NO_CACHE_DIR=1
 
 WORKDIR /app
 COPY pyproject.toml .
